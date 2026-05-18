@@ -51,9 +51,10 @@ app.delete("/deleteStudent/:id", (req, res) => {
 
 
 // START SERVER
-const server = app.listen(3000, "0.0.0.0", () => {
-    console.log("Server running on http://0.0.0.0:3000");
-    console.log("Visit http://localhost:3000 in your browser");
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
+    console.log(`Visit http://localhost:${PORT} in your browser`);
 });
 
 server.on('error', (err) => {
