@@ -1,4 +1,4 @@
-const API_URL = "/api";
+const API_URL = "";
 
 // LOAD STUDENTS
 async function loadStudents() {
